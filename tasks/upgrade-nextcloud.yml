@@ -1,5 +1,5 @@
 ---
-- name: "Upgrade NextCloud Apps: {{ item.name }}"
+- name: "Upgrade NextCloud Apps | {{ item.name }}"
   become: true
   become_user: "{{ nextcloud_user }}"
   command:
@@ -8,7 +8,7 @@
   register: upgrade_nextcloud_app
   changed_when: upgrade_nextcloud_app.stdout != ""
 
-- name: "Upgrade NextCloud Core: {{ item.name }}"
+- name: "Upgrade NextCloud Core | {{ item.name }}"
   become: true
   become_user: "{{ nextcloud_user }}"
   command:
