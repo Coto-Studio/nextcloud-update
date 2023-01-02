@@ -1,2 +1,4 @@
 ---
 # defaults file for nextcloud-update
+nextcloud_user: www-data
+nextcloud_installs: []
